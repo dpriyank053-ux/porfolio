@@ -1,0 +1,144 @@
+/* Global Reset & Base Setup */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    scroll-behavior: auto; /* Let Lenis smooth scroll handle it */
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+body {
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    position: relative;
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+body.is-locked {
+    overflow: hidden;
+    touch-action: none;
+}
+
+/* Accessibility: Skip to Main Content Link */
+.skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: calc(var(--z-header) + 10);
+    padding: 0.6rem 1.2rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transform: translateY(-200%);
+    transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* Global High-Contrast Focus Visible Outline */
+:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 3px;
+}
+
+/* Persistent WebGL Canvas Container */
+.webgl-canvas-container {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    pointer-events: none;
+    z-index: var(--z-canvas);
+    overflow: hidden;
+}
+
+#webgl-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+/* Editorial Grid Shell */
+.page-shell {
+    position: relative;
+    z-index: var(--z-dom);
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+    padding-inline: var(--page-padding);
+}
+
+/* Semantic Section Architecture */
+.section {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    min-height: 80svh;
+    min-height: 80dvh;
+    padding-block: clamp(60px, 12vh, 180px);
+}
+
+.section-full-height {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Editorial Grid Guides & Columns */
+.editorial-grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: clamp(16px, 2.5vw, 36px);
+    row-gap: clamp(24px, 4vh, 60px);
+}
+
+/* Thin Divider System */
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--line);
+    border: none;
+    margin: 0;
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 100%;
+    background-color: var(--line);
+}
+
+/* Layering Helpers */
+.layer-bg { z-index: var(--z-background); }
+.layer-dom { z-index: var(--z-dom); position: relative; }
+.layer-canvas { z-index: var(--z-canvas); }
+.layer-foreground { z-index: var(--z-foreground); position: relative; }
+.layer-header { z-index: var(--z-header); position: relative; }
+
+/* Pointer interaction preservation */
+a, button, input, textarea, select, .interactive {
+    pointer-events: auto;
+    position: relative;
+}

@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@700;800&display=swap');
+
+/* Base Typography Resets */
+body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Display Type System (Geometric, Futuristic, Wide, Editorial) */
+.font-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+/* Fluid Typography Scale */
+.display-xl {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.8rem, 8.8vw, 11.6rem);
+    line-height: 0.86;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.display-lg {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.85rem, 5.2vw, 5.8rem);
+    line-height: 0.90;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.display-md {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.4rem, 3.4vw, 3.4rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.display-numeral {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.2rem, 4.5vw, 4.8rem);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+}
+
+.capability-numeral {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(3.4rem, 8.0vw, 11.5rem);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    color: var(--text-primary);
+    user-select: none;
+    margin-bottom: clamp(14px, 2.5vh, 32px);
+}
+
+.capability-title {
+    font-family: var(--font-body);
+    font-size: clamp(1.05rem, 1.3vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.about-statement {
+    font-family: var(--font-body);
+    font-size: clamp(1.5rem, 3.6vw, 4.2rem);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    max-width: 880px;
+}
+
+.journal-title {
+    font-family: var(--font-body);
+    font-size: clamp(1.3rem, 2.4vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.journal-date {
+    font-family: var(--font-body);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.journal-category {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+}
+
+.journal-desc {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 38ch;
+    margin-bottom: 1.2rem;
+}
+
+/* Location Typography */
+.location-label {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: clamp(12px, 2vh, 24px);
+}
+
+.location-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(4.5rem, 13.5vw, 15.5rem);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: clamp(16px, 3vh, 32px);
+    user-select: none;
+}
+
+.location-suffix {
+    font-family: var(--font-body);
+    font-size: clamp(1.2rem, 2.2vw, 2.2rem);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    color: var(--text-secondary);
+    margin-bottom: clamp(32px, 5vh, 60px);
+}
+
+/* Contact Typography */
+.contact-col-label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.contact-email {
+    font-family: var(--font-body);
+    font-size: clamp(1.15rem, 1.8vw, 1.8rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    transition: border-color var(--transition-standard), opacity var(--transition-standard);
+}
+
+.contact-email:hover {
+    border-color: var(--text-primary);
+    opacity: 0.8;
+}
+
+.contact-col-desc {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 34ch;
+}
+
+.contact-location-note {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+/* Global Menu Overlay Typography */
+.menu-tag {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.menu-nav-link {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5.4vw, 4.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: clamp(12px, 2vw, 24px);
+    transition: transform var(--transition-standard), opacity var(--transition-standard);
+}
+
+.menu-nav-link:hover {
+    transform: translateX(12px);
+    opacity: 0.8;
+}
+
+.menu-nav-link .menu-num {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.menu-count {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    vertical-align: super;
+    margin-left: 0.4rem;
+}
+
+/* Footer Typography */
+.footer-col-label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.footer-nav-link {
+    font-family: var(--font-body);
+    font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: opacity var(--transition-standard);
+}
+
+.footer-nav-link:hover {
+    opacity: 0.7;
+}
+
+.footer-nav-link sup {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-left: 0.25rem;
+}
+
+.footer-desc {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 34ch;
+}
+
+.footer-copyright {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+}
+
+.footer-meta {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.editorial-heading {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--text-primary);
+}
+
+.editorial-statement {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2.0vw, 1.85rem);
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+.body-large {
+    font-family: var(--font-body);
+    font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.body-copy {
+    font-family: var(--font-body);
+    font-size: clamp(0.88rem, 1vw, 1.0rem);
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+.meta-hero {
+    font-family: var(--font-body);
+    font-size: clamp(0.72rem, 0.85vw, 0.82rem);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.hero-intro-text {
+    font-family: var(--font-body);
+    font-size: clamp(0.98rem, 1.25vw, 1.25rem);
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-width: 38ch;
+}
+
+.hero-scroll-cue {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    opacity: 0.85;
+}
+
+.section-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.section-indicator .arrow {
+    display: inline-block;
+    color: var(--text-muted);
+    transition: transform var(--transition-standard);
+}
+
+.meta-label {
+    font-family: var(--font-body);
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.meta-value {
+    font-family: var(--font-body);
+    font-size: clamp(0.88rem, 1vw, 1.0rem);
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin-top: 0.35rem;
+}
+
+.nav-link-text {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-standard);
+}
+
+.nav-link-text:hover {
+    color: var(--text-primary);
+}
+
+.editorial-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    transition: border-color var(--transition-standard), opacity var(--transition-standard);
+}
+
+.editorial-link:hover {
+    border-color: var(--text-primary);
+    opacity: 0.8;
+}

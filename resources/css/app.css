@@ -1,0 +1,32 @@
+@import './tokens.css';
+@import './typography.css';
+@import './layout.css';
+@import './sections.css';
+
+/* Global Custom Selection & Scrollbar */
+::selection {
+    background: #ffffff;
+    color: #000000;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Minimal Discrete Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
